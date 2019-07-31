@@ -10,6 +10,7 @@ from sqlalchemy import create_engine, func
 
 from flask import Flask, jsonify
 
+from datetime import datetime, timedelta
 
 ###################################################
 # Database Setup
@@ -89,10 +90,43 @@ def stations():
 
     return jsonify(list_stations)
 
+@app.route("/api/v1.0/<start>")
+def date(start):
 
-        
+    start_date = datetime.strptime(start, "%Y-%m-%d")
+    year_before = start_date-timedelta(days=365)
+
+    if start_date <= datetime(2017, 8, 23) or start_date >= datetime(2011, 1, 1):
+        str_yago = year_before.strftime("%Y-%m-%d")
+
+        session = Session(engine)
+        date_temp_date = session.query(Measurement.date, Measurement.tobs, Measurement.station).\
+            filter(Measurement.date.between(str_yago, start)).all()
+   
+        all_temp = []
+        for date, tobs, station in date_temp_date:
+            temp_dict = {}
+            temp_dict["Date"] = date
+            temp_dict["Temp (*F)"] = tobs
+            temp_dict["Station"] = station
+
+            all_temp.append(temp_dict)
+
+        return jsonify(all_temp)
+    
+    elif start_date > datetime(2017, 8, 23):
+        return f"start date be between '2011-01-01'and '2017-08-23'"
+
+    elif year_before < datetime(2011, 1, 1):
+        return f"start date be between '2011-01-01'and '2017-08-23'"
+    
+    
 
 
+@app.route("/api/v1.0/<start>/<end>")
+def datebetween(start, end):
+#    session = Session(engine)
+    return "This is in progress start, end"
 if __name__ == '__main__':
     app.run(debug=True)
         
