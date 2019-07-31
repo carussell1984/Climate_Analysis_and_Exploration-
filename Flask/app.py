@@ -92,11 +92,18 @@ def stations():
 
 @app.route("/api/v1.0/<start>")
 def date(start):
-
-    start_date = datetime.strptime(start, "%Y-%m-%d")
-    year_before = start_date-timedelta(days=365)
-
+    try:    
+        start_date = datetime.strptime(start, "%Y-%m-%d")
+        year_before = start_date-timedelta(days=365)
+    except ValueError:
+        return (f"Your entry failed to return a search. Please check your entry and try again.<br/>"
+                f"Please refer to the set of instruction below:<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp* Enter a start date between the dates of '2011-01-01' and '2017-08-23'.<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp* Dates must be in YYYY-MM-DD format.<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp* Do not preceed or end the date with either  '  or  '""' symbols.")
+    
     if start_date <= datetime(2017, 8, 23) or start_date >= datetime(2011, 1, 1):
+        
         str_yago = year_before.strftime("%Y-%m-%d")
 
         session = Session(engine)
@@ -120,13 +127,13 @@ def date(start):
     elif year_before < datetime(2011, 1, 1):
         return f"start date be between '2011-01-01'and '2017-08-23'"
     
-    
 
 
 @app.route("/api/v1.0/<start>/<end>")
 def datebetween(start, end):
 #    session = Session(engine)
     return "This is in progress start, end"
+    
 if __name__ == '__main__':
     app.run(debug=True)
         
