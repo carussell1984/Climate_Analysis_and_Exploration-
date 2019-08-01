@@ -1,7 +1,22 @@
-# Climate_Analysis_and_Exploration
+<section>
+<div>
+# Climate Analysis and Exploration Project Overview
 
 Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii! To help with your trip planning, you need to do some climate analysis on the area. The following outlines what you need to do.
-<div> 
+</div>
+</section>
+
+<section>
+<hr1><Strong>Resources for project</Strong></hr1>
+<p>The resources folder in the this github repo contain two csv files and one sqlite file. The csv files a visual representation of what is in hawaii.sqlite file.</p>
+<p>There is an identical hawaii.sqlite file in the Flask folder that the app.py file uses.</p>
+</section>
+
+<section>
+<div>
+ <hr1><Strong>Climate Analysis and Database Exploration</Strong></hr1>
+<p>The following analysis was performed using jupyter notebook in the main in the file "climate_exploration.ipynb" A starter notebook was provided was a template and a guide, "climate_starter.ipynb"
+</div>
 <hr2><Strong>Step 1-Use Python and SQL Alchemy to do basic Climate Analysis and Database Exploration.</Strong></hr2>
   <br/>
   <p>Use the provided starter notebook and hawaii.sqlite files.</p>
@@ -50,5 +65,5 @@ Congratulations! You've decided to treat yourself to a long holiday vacation in 
    <p>Identify the average temperature in June at all stations across all available years in the dataset. Do the same for December temperature.</p>
    <p>Use the independant t-test to determine whether the difference in the means, if any, is statistically significant.</p>
   </div>
-  </div>
+  </section>
  
