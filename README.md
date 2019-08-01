@@ -4,16 +4,18 @@
 
 Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii! To help with your trip planning, you need to do some climate analysis on the area. The following outlines what you need to do.
 </div>
-</section>
-<hr/>
 
+</section>
 <section>
+<hr/>
 <hr1><Strong>Resources for project</Strong></hr1>
 <p>The resources folder in the this github repo contain two csv files and one sqlite file. The csv files a visual representation of what is in hawaii.sqlite file.</p>
 <p>There is an identical hawaii.sqlite file in the Flask folder that the app.py file uses.</p>
 </section>
+<hr/>
 
 <section>
+<hr/>
 <div>
  <hr1><Strong>Climate Analysis and Database Exploration</Strong></hr1>
 <p>The following analysis was performed using jupyter notebook in the main in the file "climate_exploration.ipynb" A starter notebook was provided was a template and a guide, "climate_starter.ipynb"
@@ -69,6 +71,7 @@ Congratulations! You've decided to treat yourself to a long holiday vacation in 
   </section>
  
  <section>
+ <hr/>
  <div>
  <hr1><Strong>Climate API Routes Developed Via Flask</Strong></hr1>
   <p>The app.py file to run flask is in the Flask folder in this github repo.</p>
