@@ -12,7 +12,7 @@ Congratulations! You've decided to treat yourself to a long holiday vacation in 
 <p>The resources folder in the this github repo contain two csv files and one sqlite file. The csv files a visual representation of what is in hawaii.sqlite file.</p>
 <p>There is an identical hawaii.sqlite file in the Flask folder that the app.py file uses.</p>
 </section>
-<hr/>
+
 
 <section>
 <hr/>
