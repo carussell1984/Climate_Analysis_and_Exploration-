@@ -3,19 +3,19 @@
 Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii! To help with your trip planning, you need to do some climate analysis on the area. The following outlines what you need to do.
 <div> 
 <hr2><Strong>Step 1: Use Python and SQL Alchemy to do basic Climate Analysis and Database Exploration.</Strong></hr2>
-  <p>Use the provided starter notebook and hawaii.sqlite files</p>
-  <p>Choose a start date and an end date for your trip, 3 - 15 days long</p>
-  <p>Use SQLAlchemy <code>create_engine</code>to connect to your sqlite database</p>
-  <p>Use SQLAlchemy <code>automap_base()</code> to reflect your tables into classes and save a reference to those classes called Station and     Measurement</p>
+  <p>Use the provided starter notebook and hawaii.sqlite files.</p>
+  <p>Choose a start date and an end date for your trip, 3 - 15 days long.</p>
+  <p>Use SQLAlchemy <code>create_engine</code>to connect to your sqlite database.</p>
+  <p>Use SQLAlchemy <code>automap_base()</code> to reflect your tables into classes and save a reference to those classes called Station and     Measurement.</p>
 </div> 
 <div> 
 <hr2><Strong>Step 2: Perform Precipitation Analaysis</Strong></hr2>
- * Design a query to retrieve the last 12 months of precipitation data
- * Select only the date and prcp values
- * Load the query results into a Pandas DataFrame and set the index to the date column
- * Sort the DataFrame values by date
- * Plot the results using the DataFrame plot method
- * Use Pandas to perform statistical analysis on the precipitation data
+ <p>Design a query to retrieve the last 12 months of precipitation data.</p>
+ <p>Select only the date and prcp values.</p>
+ <p>Load the query results into a Pandas DataFrame and set the index to the date column.</p>
+ <p>Sort the DataFrame values by date.</p>
+ <p>Plot the results using the DataFrame plot method.</p>
+ <p>Use Pandas to perform statistical analysis on the precipitation data.</p>
  </div> 
  <div> 
  <hr2><Strong>Step 3: Station Analysis:</Strong></hr2>
