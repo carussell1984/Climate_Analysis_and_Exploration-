@@ -45,21 +45,26 @@ app = Flask(__name__)
 @app.route("/")
 def home():
    return (
-                f"Available Routes:<br/>"
+                f"<strong>Available Routes:</strong><br/>"
                 f"<br/>"
-                f"&nbsp&nbsp&nbsp&nbsp&nbsp/api/v1.0/precipitation:<br/>"
-                f"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-Will return the date and the preciption values.<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp<strong>(i)</strong> /api/v1.0/precipitation:<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWill return the date and the preciption values.<br/>"
                 f"<br/>"
-                f"&nbsp&nbsp&nbsp&nbsp&nbsp/api/v1.0/stations:<br/>"
-                f"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-Will provide a list of stations from the dataset.<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp<strong>(ii)</strong> /api/v1.0/stations:<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWill provide a list of stations from the dataset.<br/>"
                 "<br/>"
-                f"&nbsp&nbsp&nbsp&nbsp&nbsp/api/v1.0/tobs:<br/>"
-                f"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-Query for the dates and temperature observations from a year from the last data point.<br/>"
-                f"&nbsp&nbsp&nbsp&nbsp&nbsp/api/v1.0/&ltstart&gt:<br/>"
-                f"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-Query for the dates and temperature observations from a year from the last data point.<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp<strong>(iii)</strong> /api/v1.0/tobs:<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWill return the dates and temperature observations within a year from the last data point.<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp<strong>(iv)</strong> /api/v1.0/&ltstart&gt:<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWill return the minumum temperature, maximum temperature, and the average temperature for dates equal to and greater than the search query<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(up until 2017-08-23).<br/>"
                 f"<br/>"
-                f"&nbsp&nbsp&nbsp&nbsp&nbsp/api/v1.0/&ltstart&gt/&ltend&gt:<br/>"
-                f"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-Return a JSON list of the minimum temperature, the average temperature, and the max temperature for a given start or start-end range.<br/>")
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp<strong>(v)</strong> /api/v1.0/&ltstart&gt/&ltend&gt:<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWill return the minimum temperature, the average temperature, and the max temperature between and including the dates provided.<br/><br/>"
+                f"Please refer to the set of instructions below when performing temperature data queries by start date or by start/end date:<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp* Enter a start date between the dates of '2010-01-01' and '2017-08-23'.<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp* Dates must be in YYYY-MM-DD format.<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp* Do not preceed or end the date with either  '  or  '""' symbols.<br/><br/>")
 
 
 @app.route("/api/v1.0/precipitation")
@@ -124,7 +129,7 @@ def above_date(start):
     except ValueError:
         return (f"Your entry failed to return a search. Please check your entry and try again.<br/>"
                 f"Please refer to the set of instructions below:<br/>"
-                f"&nbsp&nbsp&nbsp&nbsp&nbsp* Enter a start date between the dates of '2011-01-01' and '2017-08-23'.<br/>"
+                f"&nbsp&nbsp&nbsp&nbsp&nbsp* Enter a start date between the dates of '2010-01-01' and '2017-08-23'.<br/>"
                 f"&nbsp&nbsp&nbsp&nbsp&nbsp* Dates must be in YYYY-MM-DD format.<br/>"
                 f"&nbsp&nbsp&nbsp&nbsp&nbsp* Do not preceed or end the date with either  '  or  '""' symbols.<br/><br/>"
                 f"To receive a list of stations the route is: /api/v1.0/stations<br/>"
