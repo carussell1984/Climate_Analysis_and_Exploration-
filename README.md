@@ -1,6 +1,6 @@
 <section>
 <div>
-# Climate Analysis and Exploration Project Overview
+<title>Climate Analysis and Exploration Project Overview</title>
 
 Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii! To help with your trip planning, you need to do some climate analysis on the area. The following outlines what you need to do.
 </div>
@@ -67,3 +67,39 @@ Congratulations! You've decided to treat yourself to a long holiday vacation in 
   </div>
   </section>
  
+ <section>
+ <div>
+ <hr1><Strong>Climate API Routes Developed Via Flask</Strong></hr1>
+  <p>The app.py file to run flask is in the Flask folder in this github repo.</p>
+ </div>
+ <div>
+ <hr2><Strong>Routes for Climate API</Strong></hr2>
+  <p><Strong> Route 1 - Home Page: </Strong>  ("/")
+       <summary>
+       The pages returns all routes available, search instructions, and what to expect with queries. </summary><p>
+  <p><Strong> Route 2 - Precipitation Data: </Strong>("/api/v1.0/precipitation") 
+       <summary>
+       Converts the query results to a dictionary using the date as the key and the prcp as the value. </summary><p>
+  <p><Strong> Route 3 - Data Collection Stations: </Strong> ("/api/v1.0/stations")
+       <summary>
+       Returns a JSON list of stations from the dataset. </summary><p>
+  <p><Strong> Route 4 - Temperature Observations: </Strong>("/api/v1.0/tobs")
+       <summary>
+       Query the dates and temperatures observations from a year from the last data point. Return a JSON list of Temperature Observations for the previous year </summary><p>
+   <p><Strong> Route 5 - Temperature Observations: </Strong> ("/api/v1.0/<start>")
+      <p><summary>
+      Return a JSON list of the minimum temperature, the average temerature, and the max temperature for a given start date. When give the start only the temp min, max, and average is returned for all dates greater then and equal to the start date </summary><p>
+  <p><Strong> Route 6 - Temperature Observations: </Strong> ("/api/v1.0/<start>/<end>")
+       <summary>
+       Return a JSON list of the minimum temperature, the average temerature, and the max temperature for a given start date and end date, inclusive of the query dates. </summary><p>
+   </div>
+</section>
+
+
+
+
+
+
+
+
+
