@@ -18,7 +18,7 @@ Congratulations! You've decided to treat yourself to a long holiday vacation in 
 <hr/>
 <div>
  <hr1><Strong>Climate Analysis and Database Exploration</Strong></hr1>
-<p>The following analysis was performed using jupyter notebook in the main in the file "climate_exploration.ipynb" A starter notebook was provided was a template and a guide, "climate_starter.ipynb"
+<p>The following analysis was performed using jupyter notebook entitled "climate_exploration.ipynb" A starter notebook was provided was a template and a guide, "climate_starter.ipynb"
 </div>
 <hr2><Strong>Step 1-Use Python and SQL Alchemy to do basic Climate Analysis and Database Exploration.</Strong></hr2>
   <br/>
