@@ -92,7 +92,7 @@ Congratulations! You've decided to treat yourself to a long holiday vacation in 
        Query the dates and temperatures observations from a year from the last data point. Return a JSON list of Temperature Observations for the previous year </summary><p>
    <p><Strong> Route 5 - Temperature Observations: </Strong> ("/api/v1.0/&ltstart&gt")
       <p><summary>
-      Return a JSON list of the minimum temperature, the average temerature, and the max temperature for a given start date. When give the start only the temp min, max, and average is returned for all dates greater then and equal to the start date </summary><p>
+      Return a JSON list of the minimum temperature, the average temperature, and the max temperature for a given start date. When given the start date only the temp min, max, and average is returned for all dates greater then and equal to the start date </summary><p>
   <p><Strong> Route 6 - Temperature Observations: </Strong> ("/api/v1.0/&ltstart&gt/&ltend&gt")
        <summary>
        Return a JSON list of the minimum temperature, the average temerature, and the max temperature for a given start date and end date, inclusive of the query dates. </summary><p>
