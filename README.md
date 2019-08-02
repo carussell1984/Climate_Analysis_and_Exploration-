@@ -9,8 +9,8 @@ Congratulations! You've decided to treat yourself to a long holiday vacation in 
 <section>
 <hr/>
 <hr1><Strong>Resources for project</Strong></hr1>
-<p>The resources folder in the this github repo contain two csv files and one sqlite file. The csv files a visual representation of what is in hawaii.sqlite file.</p>
-<p>There is an identical hawaii.sqlite file in the Flask folder that the app.py file uses.</p>
+<p>The resources folder in the this github repo contain two csv files and one sqlite file. The csv files are a visual representation of what is in hawaii.sqlite file.</p>
+<p>There is an identical hawaii.sqlite file in the Flask folder that the app.py file runs off of.</p>
 </section>
 
 
@@ -18,7 +18,7 @@ Congratulations! You've decided to treat yourself to a long holiday vacation in 
 <hr/>
 <div>
  <hr1><Strong>Climate Analysis and Database Exploration</Strong></hr1>
-<p>The following analysis was performed using jupyter notebook entitled "climate_exploration.ipynb" A starter notebook was provided was a template and a guide, "climate_starter.ipynb"
+<p>The following analysis was performed using a jupyter notebook entitled "climate_exploration.ipynb" A starter jupyter notebook was provided as guide and is entititled, "climate_starter.ipynb"
 </div>
 <hr2><Strong>Step 1-Use Python and SQL Alchemy to do basic Climate Analysis and Database Exploration.</Strong></hr2>
   <br/>
@@ -47,7 +47,7 @@ Congratulations! You've decided to treat yourself to a long holiday vacation in 
  <div> 
  <hr2><Strong>Step 4-Daily Normals:</Strong></hr2>
  <p>Calculate the daily normals. Normals are the averages for the min, avg, and max temperatures.</p>
- <p>You are provided with a function called daily_normals that will calculate the daily normals for a specific date. This date string will be in the format %m-%d. Be sure to use all historic tobs that match that date string.</p>
+ <p>You are provided with a function called daily_normals that will calculate the daily normals for a specific date. This date string will be in the format %m-%d. Be sure to use all historic temperature observations (tobs) that match that date string.</p>
 <p>Create a list of dates for your trip in the format %m-%d. Use the daily_normals function to calculate the normals for each date string and append the results to a list.</p>
 <p>Load the list of daily normals into a Pandas DataFrame and set the index equal to the date.</p>
 <p>Use Pandas to plot an area plot (stacked=False) for the daily normals.</p>
@@ -60,7 +60,7 @@ Congratulations! You've decided to treat yourself to a long holiday vacation in 
   <p>use the <code>calc_temps</code> function to calculate the min, avg, and max temperatures for your trip using the matching dates from the previous year.</p>
   <p>Plot the min, avg, max temperature from your previous query as a bar chart<br/>
         - Average temp will be the bar height<br/>
-        - Yerr will be tmax-tmin</p>
+        - yerr will be tmax-tmin</p>
  </div>
   <div>
   <strong>Part 2</strong>
@@ -89,10 +89,10 @@ Congratulations! You've decided to treat yourself to a long holiday vacation in 
        Returns a JSON list of stations from the dataset. </summary><p>
   <p><Strong> Route 4 - Temperature Observations: </Strong>("/api/v1.0/tobs")
        <summary>
-       Query the dates and temperatures observations from a year from the last data point. Return a JSON list of Temperature Observations for the previous year </summary><p>
+       Query the dates and temperature observations within a year from the last data point. Return a JSON list of Temperature Observations for the previous year </summary><p>
    <p><Strong> Route 5 - Temperature Observations: </Strong> ("/api/v1.0/&ltstart&gt")
       <p><summary>
-      Return a JSON list of the minimum temperature, the average temperature, and the max temperature for a given start date. When given the start date only the temp min, max, and average is returned for all dates greater then and equal to the start date </summary><p>
+      Return a JSON list of the minimum temperature, the average temperature, and the max temperature for a given start date. When given the start date only the temp min, max, and average is returned for all the dates greater then and equal to the start date </summary><p>
   <p><Strong> Route 6 - Temperature Observations: </Strong> ("/api/v1.0/&ltstart&gt/&ltend&gt")
        <summary>
        Return a JSON list of the minimum temperature, the average temerature, and the max temperature for a given start date and end date, inclusive of the query dates. </summary><p>
